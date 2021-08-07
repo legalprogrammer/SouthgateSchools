@@ -1,38 +1,466 @@
-.App {
+body {
+  color: #ffff;
   text-align: center;
+  font-family: poppins;
+  background-color: #000;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body #links {
+  color: #000;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body .nav {
+  height: 14vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 3px 7px 3px #fdc82f;
+          box-shadow: 0px 3px 7px 3px #fdc82f;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  z-index: 999;
+  top: 0%;
+  left: 0%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body .nav .logo {
+  width: 14%;
+}
+
+body .nav .name {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffff;
+  font-stretch: condensed;
+  letter-spacing: 3px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+body .V_link {
+  color: black;
+  font-size: 14px;
+}
+
+body .V_link:hover {
+  background-color: #fdc82f;
+}
+
+body .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 46vh;
+  width: 100%;
+  margin-bottom: 50px;
+  -webkit-transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.6s;
+}
+
+body .category .thumb {
+  background-color: #fdc82f;
+  width: 100%;
+  margin-left: 1px;
+  padding: 0px 30px;
+  -webkit-transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.6s;
+}
+
+body .category .thumb img {
+  width: 40%;
+}
+
+body .category .thumb .lines {
+  font-weight: 500;
+  color: black;
+}
+
+body .category .thumb strong {
+  color: black;
+  letter-spacing: 1px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+body .category .thumb h6 {
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+body .category .thumb:hover img,
+body .category .thumb:hover h6,
+body .category .thumb:hover .lines,
+body .category .thumb:hover strong {
+  opacity: 0;
+}
+
+body .category #mid {
+  cursor: pointer;
+}
+
+body .category #mid:hover {
+  background-size: contain;
+  background-image: url(../src/pages/pictures/middle_school_hover.jpg);
+}
+
+body .category #early {
+  cursor: pointer;
+}
+
+body .category #early:hover {
+  background-size: contain;
+  background-image: url(../src/pages/pictures/early_learning_hover.jpg);
+}
+
+body .category #junior {
+  cursor: pointer;
+}
+
+body .category #junior:hover {
+  background-size: contain;
+  background-image: url(../src/pages/pictures/junior_school_hover.jpg);
+}
+
+body .category #boarding {
+  cursor: pointer;
+}
+
+body .category #boarding:hover {
+  background-size: contain;
+  background-image: url(../src/pages/pictures/boarding_hover.jpg);
+}
+
+body .category #senior {
+  cursor: pointer;
+}
+
+body .category #senior:hover {
+  background-size: contain;
+  background-image: url(../src/pages/pictures/senior_college_hover.jpg);
+}
+
+body .intro {
+  text-align: center;
+  padding: 100px;
+}
+
+body .intro p {
+  line-height: 85px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+body .intro h2 {
+  color: #fdc82f;
+  font-weight: 600;
+  margin-bottom: 100px;
+}
+
+body .outline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 200px 150px;
+}
+
+body .outline p {
+  color: #ffff;
+  text-align: left;
+  padding-left: 400px;
+  padding-bottom: 150px;
+  width: 100%;
+}
+
+body .outline p button {
+  margin-top: 50px;
+  background-color: #fdc82f;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .outline p button:hover {
+  background-color: transparent;
+  border: 1px solid #fdc82f;
+  color: #fdc82f;
+}
+
+body .outline p h3 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+body .outline p div {
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+body .btn-g {
+  background-color: #fdc82f;
+  padding: 10px 20px;
+  border: 1px solid #fdc82f;
+  background-color: transparent;
+  margin-left: 20px;
+  font-size: 15px;
+  -webkit-transition: all ease-in-out 0.6s;
+  transition: all ease-in-out 0.6s;
+}
+
+body .btn-g a {
+  text-decoration: none;
+  color: #fdc82f;
+}
+
+body .btn-g:hover {
+  background-color: #fdc82f;
+}
+
+body .btn-g:hover a {
+  color: #000;
+}
+
+body .campus {
+  margin-top: 150px;
+}
+
+body .campus h1 {
+  margin-bottom: 50px;
+  color: #fdc82f;
+  text-transform: capitalize;
+}
+
+body .campus p {
+  line-height: 50px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+body .card {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+body .card:hover .card-body {
+  background-color: #fdc82f;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body .card .card-body {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body .card .card-body .card-text {
+  font-size: 14px;
+}
+
+body .card .card-body .card-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+body .card .card-body button {
+  background-color: #fdc82f;
+  border: none;
+  font-size: 12px;
+  color: #000;
+}
+
+body .paflet {
+  margin-top: 100px;
+}
+
+body .paflet img {
+  width: 110%;
+}
+
+body .news .news_thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 110px;
+}
+
+body .news .news_thumb p {
+  color: #ffff;
+  text-align: left;
+  padding-left: 450px;
+  padding-bottom: 50px;
+}
+
+body .news .news_thumb p button {
+  margin-top: 50px;
+  background-color: #fdc82f;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .news .news_thumb p button:hover {
+  background-color: transparent;
+  border: 1px solid #fdc82f;
+  color: #fdc82f;
+}
+
+body .news .news_thumb p h3 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+body .news .news_thumb p div {
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+body .footer {
+  background-color: #fdc82f;
+  padding: 30px;
+  margin-top: 100px;
+  color: black;
+}
+
+body .footer strong {
+  padding-left: 50px;
+}
+
+body .footer a {
+  color: black;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(Poppins/Poppins-Regular.ttf);
+}
+
+@media screen and (max-width: 767px) {
+  body .nav {
+    height: 14vh;
+    background-color: rgba(0, 0, 0, 0.9);
   }
-  to {
-    transform: rotate(360deg);
+  body .nav .logo {
+    width: 14%;
+  }
+  body .nav .name {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  body .category {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 8px;
+    -webkit-transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
+  }
+  body .category .thumb {
+    height: 50vh;
+  }
+  body .category .thumb img {
+    width: 40%;
+  }
+  body .category .thumb:hover img,
+  body .category .thumb:hover h6,
+  body .category .thumb:hover .lines,
+  body .category .thumb:hover strong {
+    display: none;
+  }
+  body .intro {
+    text-align: center;
+    margin-top: 1300px;
+    padding: 20px;
+  }
+  body .intro p {
+    line-height: 30px;
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+  body .intro h2 {
+    color: #fdc82f;
+    font-weight: 600;
+    margin-bottom: 100px;
+  }
+  body .outline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 350px 50px;
+    margin-top: 100px;
+  }
+  body .outline .cap {
+    display: block;
+  }
+  body .outline p {
+    color: #ffff;
+    text-align: left;
+    padding-left: 0px;
+    padding-bottom: 520px;
+    width: 100%;
+  }
+  body .btn-g {
+    display: none;
+  }
+  body .campus {
+    margin-top: 50px;
+  }
+  body .campus p {
+    line-height: 30px;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  body .paflet {
+    display: none;
+  }
+  body .news .news_thumb {
+    padding: 450px 0px;
+  }
+  body .news .news_thumb p {
+    padding-left: 0px;
+    padding-bottom: 50px;
+  }
+  body .footer {
+    padding: 10px;
+  }
+  body .footer strong {
+    padding-left: 30px;
   }
 }
+/*# sourceMappingURL=App.css.map */
