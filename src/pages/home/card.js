@@ -1,17 +1,16 @@
-import React from "react";
-import { cardinfo } from "./data";
-import { paflet } from "./data";
-import  { newsdata } from "./data"
-import { Card, Button, Col, Row, Container, Carousel } from "react-bootstrap";
-
-
-
+import React from 'react';
+import { cardinfo } from './data';
+import { paflet } from './data';
+import { Card, Button, Col, Row, Container } from 'react-bootstrap';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 const Cardlinks = () => {
-  const [news, setnews] = React.useState(newsdata);
-
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div>
-      <Container className="campus">
+      <Container className='campus' data-aos='fade-up'>
         <h1>Our key points of difference</h1>
         <p>
           Southgate’s holistic education, underpinned by the Christian faith,
@@ -19,7 +18,7 @@ const Cardlinks = () => {
           do amazing things. We invite you to explore …
         </p>
       </Container>
-      <Container style={{ marginTop: "50px" }}>
+      <Container style={{ marginTop: '50px' }} data-aos='fade-up'>
         <Row>
           {cardinfo.map((carditems) => {
             const { text, id, title, link, pic } = carditems;
@@ -27,19 +26,19 @@ const Cardlinks = () => {
               <Col key={id}>
                 <Card
                   style={{
-                    width: "20rem",
-                    marginTop: "70px",
-                    backgroundColor: "#000",
+                    width: '20rem',
+                    marginTop: '70px',
+                    backgroundColor: '#000',
                   }}
                 >
-                  <Card.Img variant="top" src={pic} />
+                  <Card.Img variant='top' src={pic} />
                   <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <br /> <br />
-                    <Card.Text className="text">{text}</Card.Text>
+                    <Card.Text className='text'>{text}</Card.Text>
                     <br />
                     <a href={link}>
-                      {" "}
+                      {' '}
                       <Button>READ MORE +</Button>
                     </a>
                   </Card.Body>
@@ -49,8 +48,8 @@ const Cardlinks = () => {
           })}
         </Row>
       </Container>
-      <div>
-        <Row className="paflet">
+      <div data-aos='fade-up'>
+        <Row className='paflet'>
           {paflet.map((paflet) => {
             const { id, img, link } = paflet;
             return (
@@ -63,7 +62,7 @@ const Cardlinks = () => {
           })}
         </Row>
       </div>
-      <Container className="campus">
+      <Container className='campus' data-aos='fade-up' id="campus">
         <h1>Our campuses</h1>
         <p>
           Abbotsleigh is situated across two campuses on 15 tree studded
@@ -73,10 +72,10 @@ const Cardlinks = () => {
           Highway and Ada Avenue.
         </p>
       </Container>
-      <Container className="schools" style={{ marginTop: "250px" }}>
+      <Container className='schools'data-aos='fade-up' style={{ marginTop: '250px' }}>
         <Row>
           <Col>
-            <img src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/191/JS_campus_thumb.jpg" />
+            <img src='https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/191/JS_campus_thumb.jpg' />
             <br />
             <br />
             <br />
@@ -86,12 +85,12 @@ const Cardlinks = () => {
               classrooms and learning spaces for children T-6
             </p>
             <br />
-            <a href="">
+            <a href='/Junior'>
               <button
                 style={{
-                  backgroundColor: "#fdc82f",
-                  border: "none",
-                  padding: "7px 10px",
+                  backgroundColor: '#fdc82f',
+                  border: 'none',
+                  padding: '7px 10px',
                 }}
               >
                 Find out more
@@ -99,7 +98,7 @@ const Cardlinks = () => {
             </a>
           </Col>
           <Col>
-            <img src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/191/SS_campus_thumb.jpg" />
+            <img src='https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/191/SS_campus_thumb.jpg' />
             <br />
             <br />
             <br />
@@ -109,12 +108,12 @@ const Cardlinks = () => {
               spaces for sport, music, dance and the visual arts
             </p>
             <br />
-            <a href="">
+            <a href='/Senior'>
               <button
                 style={{
-                  backgroundColor: "#fdc82f",
-                  border: "none",
-                  padding: "7px 10px",
+                  backgroundColor: '#fdc82f',
+                  border: 'none',
+                  padding: '7px 10px',
                 }}
               >
                 Find out more
@@ -122,19 +121,6 @@ const Cardlinks = () => {
             </a>
           </Col>
         </Row>
-      </Container>
-      <Container className="campus">
-        <h1>News and events</h1>
-        <p>
-          Southgate is a vibrant and busy place. Our news and events section
-          keeps you up to date with what's going on. Share in our joys. Take
-          part in our events. Visit often – we don't want you to miss a thing.
-        </p>
-        <br />
-        <br />
-        <br />
-        <br />
-        <h1>News</h1>
       </Container>
     </div>
   );

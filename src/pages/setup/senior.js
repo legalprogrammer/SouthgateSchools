@@ -1,7 +1,7 @@
 import React from "react";
 import Mainnav from "../home/nav";
-import { Container, Row, Col, Image,Carousel } from "react-bootstrap";
-import picTwo from "../pictures/p1.jpg";
+import { Container, Image,Carousel } from "react-bootstrap";
+import picTwo from "../pictures/p6.jpg";
 import { data } from "../junior/data";
 import Footer from "../home/footer";
 const Senior = () => {
@@ -10,9 +10,9 @@ const Senior = () => {
     <div>
       <Mainnav />
       <Container fluid id="enrol">
-            <Image src={picTwo}/>
+            <Image src={picTwo} id="fade" alt="image"/>
       </Container>
-      <Container className="campus enroll-head" style={{ marginTop: "900px" }}>
+      <Container className="campus enrollhead" id="midhead">
         <h1>Senior SCHOOL</h1>
         <p>
           When young children start school, they bring an innate sense of
@@ -21,12 +21,12 @@ const Senior = () => {
           student to achieve remarkable outcomes.
         </p>
       </Container>
-      <Carousel>
+      <Carousel id="carouselmiddle">
           {state.map((info) => {
             const { id, text, title, btnval, nameid } = info;
             return (
               <Carousel.Item interval={10000} key={id} id={nameid}>
-                <div className="" id="enroll-carousel">
+                <div className="" id="enrollcarousel">
                   <Carousel.Caption id="cap">
                     <p>
                       <h3>{title}</h3>

@@ -1,5 +1,4 @@
 import React from "react";
-
 import Mainnav from "../home/nav";
 import Footer from "../home/footer"
 import { Container, Row, Col,Image } from "react-bootstrap";
@@ -8,7 +7,7 @@ const Easy = () => {
     <div>
       <Mainnav />
       <Container fluid id="enrol" >
-        <Image src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/217/ELC_CheeringGirl_banner.jpg" />
+        <Image  alt="image" src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/217/ELC_CheeringGirl_banner.jpg" />
       </Container>
       <Container className="campus enroll-head" style={{ marginTop: "400px" }}>
         <h1>EARLY LEARNING</h1>
@@ -24,7 +23,7 @@ const Easy = () => {
           <Col>
             <h4>Early Learning Centre</h4>
             <br />
-            <img src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/217/ELCballboy_thumb.jpg" />
+            <img alt="image" src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/217/ELCballboy_thumb.jpg" />
             <br />
             <br />
             <br />
@@ -52,7 +51,7 @@ const Easy = () => {
           <Col>
             <h4>Transition</h4>
             <br />
-            <img src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/217/Transition1_thumb.jpg" />
+            <img alt="image" src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/217/Transition1_thumb.jpg" />
             <br />
             <br />
             <br />

@@ -15,14 +15,13 @@ import picTwo from "../pictures/pc6.jpg";
 import { enrolldata, cardinfo, paflet } from "../enrolment/enrolldata";
 
 const Enrolpage = () => {
-  const [state, setstate] = React.useState(enrolldata);
   return (
     <div>
       <Mainnav />
       <container fluid id="enrol">
-        <Image src={picTwo} />
+        <Image src={picTwo} alt="image" />
       </container>
-      <section className="intro enroll-head">
+      <section className="intro enroll-head" id="enrollhead">
         <h2>How to apply</h2>
         <p>
           We look forward to helping you arrange your visit to Abbotsleigh to
@@ -31,7 +30,7 @@ const Enrolpage = () => {
       </section>
       <div>
         <div>
-          {state.map((info) => {
+          {enrolldata.map((info) => {
             const { title, nameid, id } = info;
             return (
               <button key={id} className="btn-g">
@@ -41,11 +40,11 @@ const Enrolpage = () => {
           })}
         </div>
         <Carousel>
-          {state.map((info) => {
-            const { id, text, title, img, btnval, nameid } = info;
+          {enrolldata.map((info) => {
+            const { id, text, title, btnval, nameid } = info;
             return (
               <Carousel.Item interval={10000} key={id} id={nameid}>
-                <div className="" id="enroll-carousel">
+                <div className="" id="enrollcarousel">
                   <Carousel.Caption id="cap">
                     <p>
                       <h3>{title}</h3>
@@ -107,7 +106,7 @@ const Enrolpage = () => {
                 return (
                   <Col key={id}>
                     <a href={link}>
-                      <img src={img} />
+                      <img src={img} alt="image" />
                     </a>
                   </Col>
                 );
@@ -127,7 +126,7 @@ const Enrolpage = () => {
           <Container className="schools" style={{ marginTop: "250px" }}>
             <Row>
               <Col>
-                <img src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/178/BASC_thumb3.jpg" />
+                <img alt="image" src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/178/BASC_thumb3.jpg" />
                 <br />
                 <br />
                 <br />
@@ -157,7 +156,7 @@ const Enrolpage = () => {
                 </a>
               </Col>
               <Col>
-                <img src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/178/UniformShop_thumb.jpg" />
+                <img alt="image" src="https://www.abbotsleigh.nsw.edu.au/Images/UserUploadedImages/178/UniformShop_thumb.jpg" />
                 <br />
                 <br />
                 <br />
@@ -190,20 +189,6 @@ const Enrolpage = () => {
                 </a>
               </Col>
             </Row>
-          </Container>
-          <Container className="campus">
-            <h1>News and events</h1>
-            <p>
-              Southgate is a vibrant and busy place. Our news and events section
-              keeps you up to date with what's going on. Share in our joys. Take
-              part in our events. Visit often – we don't want you to miss a
-              thing.
-            </p>
-            <br />
-            <br />
-            <br />
-            <br />
-            <h1>News</h1>
           </Container>
         </div>
       </div>

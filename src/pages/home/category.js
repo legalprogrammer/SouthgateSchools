@@ -1,31 +1,37 @@
-import React from "react";
-import { data } from "./data";
-import { Link } from "react-router-dom";
-
+import React from 'react';
+import { data } from './data';
+import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 const Category = () => {
   const [list, setlist] = React.useState(data);
-
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div>
-      <div className="category">
+      <div className='category' data-aos='fade-up'>
         {list.map((listp) => {
           const { text, img, id, nameid, age, links } = listp;
           return (
-            <div key={id} className="thumb" id={nameid}>
-              <Link to={links}>
+           
+            <Link key={id} className='thumb' id={nameid} to={links}>
+             <div>
+              <Link to={links} id='links'>
                 <div>
-                  <img src={img} alt="p" />
+                  <img src={img} alt='p' />
                 </div>
-                <hr className="lines" />
+                <hr className='lines' />
                 <strong>{text}</strong>
-                <hr className="lines" />
+                <hr className='lines' />
                 <h6>{age}</h6>
               </Link>
-            </div>
+              </div>
+            </Link>
           );
         })}
       </div>
-      <section className="intro">
+      <section className='intro' data-aos='fade-up'>
         <h2>A warm welcome</h2>
         <p>
           Welcome to Southgate, a Pre Kindergarten to Year 12 Anglican day and

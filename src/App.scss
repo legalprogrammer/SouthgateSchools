@@ -1,34 +1,40 @@
-
+::-webkit-scrollbar {
+  background-color: #000;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fdc82f;
+}
 body {
-  color: #ffff;
+  color: #fff;
   text-align: center;
-  font-family: poppins;
+  font-family: Lato;
   background-color: #000;
   overflow-x: hidden;
-  #links{
-     color: #000;
-     text-decoration: none;
+  #links {
+    color: #000;
+    text-decoration: none;
   }
   .nav {
     height: 13vh;
     box-sizing: border-box;
-    box-shadow: 0px 3px 7px 3px #fdc82f;
+    border-bottom: 1px solid #111;
     width: 100%;
     font-size: 14px;
     padding: 10px;
-
     z-index: 999;
     top: 0%;
+    color: #fdc82f;
     left: 0%;
     text-align: center;
-    background-color: rgba($color: #000000, $alpha: 0.7);
+    background-color: rgba($color: #000, $alpha: 0.9);
     .logo {
       width: 14%;
     }
     .name {
       text-decoration: none;
       font-weight: 600;
-      color: #ffff;
+      color: #fdc82f;
       font-stretch: condensed;
       letter-spacing: 3px;
       font-size: 17px;
@@ -270,6 +276,17 @@ body {
       }
     }
   }
+  .contact {
+    margin-top: 100px;
+    text-align: left;
+    h3 {
+      color: #fdc82f;
+      margin-bottom: 30px;
+    }
+    p {
+      margin-top: 30px;
+    }
+  }
   .footer {
     background-color: #fdc82f;
     padding: 30px;
@@ -287,15 +304,132 @@ body {
 }
 
 @font-face {
-  font-family: poppins;
-  src: url(Poppins/Poppins-Regular.ttf);
+  font-family: Lato;
+  src: url(Lato-Regular.ttf);
 }
-
+#fade {
+  opacity: 0.5;
+}
+.music {
+  text-align: left;
+  img {
+    width: 100%;
+    height: 20%;
+    margin-top: -100px;
+    margin-bottom: 100px;
+  }
+  .topOne,
+  .topTwo,
+  .last {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  h1 {
+    color: #fdc82f;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .formlink {
+    background-color: #fdc82f;
+    color: #111;
+    border: none;
+  }
+}
+.mainform {
+  .section {
+    height: 100vh;
+    background-image: linear-gradient(
+        120deg,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.9)
+      ),
+      url(./pages/pictures/pc8.jpg);
+    padding-top: 70px;
+    text-align: left;
+    background-size: 1300px;
+    .logoname {
+      text-decoration: none;
+      color: #fff;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+    img {
+      width: 10%;
+    }
+    h5 {
+      width: 50%;
+    }
+    button {
+      background: green;
+      padding: 10px 20px;
+      border: 1px solid green;
+      outline: green;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    #continue {
+      background: none;
+      margin-left: 50px;
+    }
+  }
+  .requirements {
+    height: 100vh;
+    padding-top: 100px;
+    background-color: whitesmoke;
+    color: #000;
+    button {
+      background: green;
+      padding: 10px 20px;
+      border: 1px solid green;
+      outline: green;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    #continue {
+      color: #000;
+      background: none;
+      margin-left: 50px;
+    }
+  }
+}
+.news-details {
+  text-align: left;
+  p {
+    width: 70%;
+    font-size: 15px;
+  }
+  h2 {
+    color: #fdc82f;
+  }
+  img {
+    width: 100%;
+  }
+}
+.error {
+  color: #fdc82f;
+}
+.breadcrumb {
+  margin-left: auto;
+  cursor: pointer;
+  .active {
+    color: #fdc82f;
+  }
+}
 @media screen and (max-width: 767px) {
   body {
     .nav {
-      height: 14vh;
+      height: 13vh;
       background-color: rgba($color: #000000, $alpha: 0.9);
+      width: 100%;
       .logo {
         width: 14%;
       }
@@ -304,15 +438,21 @@ body {
         text-transform: uppercase;
       }
     }
+    .navbtn {
+      margin-top: -50px;
+    }
     .category {
       display: block;
       height: 100vh;
-      width: 100%;
+      width: 99%;
       margin-bottom: 50px;
       font-size: 8px;
       transition: all ease-in-out 0.6s;
+      padding: 30px;
       .thumb {
         height: 50vh;
+        margin-bottom: 50px;
+        margin: top 20px;
         img {
           width: 40%;
         }
@@ -321,19 +461,19 @@ body {
           h6,
           .lines,
           strong {
-            display: none;
+            opacity: 0;
           }
         }
       }
     }
     .intro {
       text-align: center;
-      margin-top: 1300px;
+      margin-top: 1400px;
       padding: 20px;
       p {
         line-height: 30px;
         text-transform: capitalize;
-        font-size: 20px;
+        font-size: 16px;
       }
       h2 {
         color: #fdc82f;
@@ -345,7 +485,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 350px 50px;
+      padding: 350px 100px;
       margin-top: 100px;
       .cap {
         display: block;
@@ -362,10 +502,10 @@ body {
       display: none;
     }
     .campus {
-      margin-top: 50px;
+      margin-top: 100px;
       p {
         line-height: 30px;
-        font-size: 18px;
+        font-size: 16px;
         text-transform: capitalize;
       }
     }
@@ -383,8 +523,16 @@ body {
     }
     .footer {
       padding: 10px;
+      font-size: 12px;
       strong {
         padding-left: 30px;
+        font-size: 10px;
+      }
+    }
+    .news-details {
+      p {
+        width: 100%;
+        margin-top: 40px;
       }
     }
   }

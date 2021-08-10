@@ -10,9 +10,9 @@ const Middle = () => {
     <div>
       <Mainnav />
       <Container fluid id="enrol">
-            <Image src={picOne}/>
+            <Image src={picOne} alt="image"/>
       </Container>
-      <Container className="campus enroll-head" style={{ marginTop: "600px" }}>
+      <Container className="campus enrollhead middle-top" id="midhead">
         <h1>Middle SCHOOL</h1>
         <p>
           When young children start school, they bring an innate sense of
@@ -21,12 +21,12 @@ const Middle = () => {
           student to achieve remarkable outcomes.
         </p>
       </Container>
-      <Carousel>
+      <Carousel id="carouselmiddle">
           {state.map((info) => {
             const { id, text, title, btnval, nameid } = info;
             return (
               <Carousel.Item interval={10000} key={id} id={nameid}>
-                <div className="" id="enroll-carousel">
+                <div className="" id="enrollcarousel">
                   <Carousel.Caption id="cap">
                     <p>
                       <h3>{title}</h3>

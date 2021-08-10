@@ -1,7 +1,6 @@
 export const enrolldata = [
   {
     text: "Welcome to Southgate, a Pre Kindergarten to Year 12 Anglican day school for girls located in Wahroonga, on Sydney’s North Shore. Our aim is to deliver a deeper learning that empowers the ‘whole girl’ so she can unleash her potential within and way beyond the classroom.",
-
     id: 1,
     nameid: "about",
     title: "Entry points",

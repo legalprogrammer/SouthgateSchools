@@ -1,30 +1,32 @@
 #enrol {
-  margin-top: -300px;
-  z-index: 30px;
+  z-index: -5;
   position: absolute;
   left: 0%;
-  top: 40%;
+  top: 10%;
 }
 
 #enrol img {
   width: 100%;
 }
 
+#midhead {
+  margin-top: 800px;
+}
+
 .enroll-head {
-  position: relative;
-  margin-top: 500px;
+  margin-top: 700px;
 }
 
 .enroll-head p {
   line-height: 10px;
 }
 
-#enroll-carousel {
+#enrollcarousel {
   display: block;
   padding: 300px 150px;
 }
 
-#enroll-carousel p {
+#enrollcarousel p {
   color: #ffff;
   text-align: center;
   padding-left: 0px;
@@ -32,7 +34,7 @@
   width: 100%;
 }
 
-#enroll-carousel p button {
+#enrollcarousel p button {
   margin-top: 50px;
   background-color: #fdc82f;
   border: none;
@@ -42,20 +44,20 @@
   transition: 0.5s;
 }
 
-#enroll-carousel p button:hover {
+#enrollcarousel p button:hover {
   background-color: transparent;
   border: 1px solid #fdc82f;
   color: #fdc82f;
 }
 
-#enroll-carousel p h3 {
+#enrollcarousel p h3 {
   margin-bottom: 30px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: capitalize;
 }
 
-#enroll-carousel p div {
+#enrollcarousel p div {
   font-size: 13px;
   text-transform: capitalize;
 }
@@ -64,11 +66,80 @@
   margin-bottom: 200px;
 }
 
-.enroll-card .newtitle {
+.enrollcard .newtitle {
   color: #fdc82f;
 }
 
-.enroll-card:hover .newtitle {
+.enrollcard:hover .newtitle {
   color: white;
+}
+
+@media screen and (max-width: 767px) {
+  #enrol {
+    z-index: 10px;
+    position: absolute;
+    left: 0%;
+    top: 20%;
+  }
+  #enrol img {
+    width: 100%;
+  }
+  #enrollhead {
+    margin-top: 350px;
+  }
+  #enrollhead p {
+    line-height: 40px;
+  }
+  #enrollcarousel {
+    display: block;
+    padding: 300px 150px;
+  }
+  #enrollcarousel p {
+    color: #ffff;
+    text-align: center;
+    padding-left: 0px;
+    padding-bottom: 150px;
+    width: 100%;
+  }
+  #enrollcarousel p button {
+    margin-top: 50px;
+    background-color: #fdc82f;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 10px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #enrollcarousel p button:hover {
+    background-color: transparent;
+    border: 1px solid #fdc82f;
+    color: #fdc82f;
+  }
+  #enrollcarousel p h3 {
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+  #enrollcarousel p div {
+    font-size: 13px;
+    text-transform: capitalize;
+  }
+  #midhead {
+    margin-top: 300px;
+  }
+  #carouselmiddle {
+    margin-top: 150px;
+    margin-bottom: -250px;
+  }
+  .new {
+    margin-bottom: 200px;
+  }
+  .enrollcard .newtitle {
+    color: #fdc82f;
+  }
+  .enrollcard:hover .newtitle {
+    color: white;
+  }
 }
 /*# sourceMappingURL=enrol.css.map */
