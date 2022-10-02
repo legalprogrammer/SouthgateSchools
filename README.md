@@ -3,6 +3,8 @@
 
  A school website based in sydney Austrailia
  
+ live at (https://southgateng.netlify.app/)
+ 
 ## Installation of dependecies
 
 Use the package manager [npm](https://npm.pypa.io/en/stable/) to install react
